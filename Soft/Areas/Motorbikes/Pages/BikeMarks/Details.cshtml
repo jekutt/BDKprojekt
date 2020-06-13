@@ -1,0 +1,24 @@
+﻿@page
+@using Loppprojekt.Aids.Reflection
+@using Loppprojekt.Pages.Extensions
+@using Loppprojekt.Data.Motorbikes.Models
+@model Loppprojekt.Soft.Areas.Motorbikes.Pages.BikeMarks.DetailsModel
+
+@{
+    Layout = "_Details";
+    const string bikeModels = "/Motorbikes/BikeModels";
+    var bikeMarkId = GetMember.Name<BikeModelData>(x => x.BikeMarkId);
+}
+
+    <body>
+        @Html.DisplayControlsFor(m => m.Item.Name)
+        @Html.DisplayControlsFor(m => m.Item.Country)
+        @Html.DisplayControlsFor(m => m.Item.Description)
+        @Html.DisplayControlsFor(m => m.Item.YearOfManufacture)
+    </body>
+
+@section Details
+{
+    @Html.HypertextLinkFor(string.Empty, new Link("Show motorbike models",
+        $"{bikeModels}/Index?fixedFilter={bikeMarkId}&fixedValue={Model.Item.Name}"))
+}

@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{ ViewData["Title"] = "C&M Catalog"; }
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="img-center">
+    <img src="/img/2016-Best-Car-Brands.jpg" alt="">
+</div>
+<div class="text-center">
+    <p>Our site is a huge catalog where you can discover many interesting things. Brands, models, cars, motorcycles and much more ..</p>
+    <p>Use mark`s, model`s and generation`s name to FIND the information about this.</p>
+    <h3 class="display-4">Search</h3>
+
+    <form id="Search" class="table" method="get" action="/Cars/Generations">
+        <input class="search2" id="Name" type="text" name="search" size="45" maxlength="200" />
+        <button type="submit" class="button btn-01">Search</button>
+
+        <script type="text/javascript">
+            document.getElementById("Search").onsubmit = function () {
+                window.location = "https://localhost:44368/Cars/Generations?FixedFilter=&FixedValue=&SearchString=" +
+                    document.getElementById("Name").value;
+                return false;
+            }
+        </script>
+    </form>
+
+</div>

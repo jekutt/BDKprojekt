@@ -1,0 +1,18 @@
+﻿@page
+@using Loppprojekt.Pages.Extensions
+@model Loppprojekt.Soft.Areas.Sales.Pages.Statements.EditModel
+
+@{
+    Layout = "_Edit";
+}
+
+    <body>
+        <input type="hidden" asp-for="Item.Name" />
+        @Html.EditControlsFor(m => m.Item.Name)
+        @Html.EditControlsFor(m => m.Item.CarModel)
+        @Html.EditControlsFor(m => m.Item.Country)
+        @Html.EditControlsFor(m => m.Item.Price)
+        @Html.EditControlsFor(m => m.Item.Contacts)
+        @Html.EditControlsFor(m => m.Item.Description)
+        @Html.EditControlsFor(m => m.Item.YearOfManufacture)
+    </body>

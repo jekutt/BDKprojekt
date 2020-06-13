@@ -1,0 +1,17 @@
+﻿@page
+@using Loppprojekt.Pages.Extensions
+@model Loppprojekt.Soft.Areas.Sales.Pages.Statements.CreateModel
+
+@{
+    Layout = "_Create";
+}
+
+    <body>
+        @Html.EditControlsFor(m => m.Item.Name)
+        @Html.EditControlsFor(m => m.Item.CarModel)
+        @Html.EditControlsFor(m => m.Item.Country)
+        @Html.EditControlsFor(m => m.Item.Price)
+        @Html.EditControlsFor(m => m.Item.Contacts)
+        @Html.EditControlsFor(m => m.Item.Description)
+        @Html.EditControlsFor(m => m.Item.YearOfManufacture)
+    </body>

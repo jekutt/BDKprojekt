@@ -1,0 +1,19 @@
+﻿@page
+@using Loppprojekt.Pages.Extensions
+@model Loppprojekt.Soft.Areas.Motorbikes.Pages.BikeModels.EditModel
+
+@{
+    Layout = "_Edit";
+}
+
+    <body>
+        @Html.EditControlsForDropDown(m => m.Item.BikeMarkId, Model.BikeMarks)
+        @Html.EditControlsFor(m => m.Item.Name)
+        @Html.EditControlsFor(m => m.Item.Country)
+        @Html.EditControlsFor(m => m.Item.BikeBodyType)
+        @Html.EditControlsFor(m => m.Item.BikePower)
+        @Html.EditControlsFor(m => m.Item.BikeAcceleration)
+        @Html.EditControlsFor(m => m.Item.MaxSpeed)
+        @Html.EditControlsFor(m => m.Item.Description)
+        @Html.EditControlsFor(m => m.Item.YearOfManufacture)
+    </body>

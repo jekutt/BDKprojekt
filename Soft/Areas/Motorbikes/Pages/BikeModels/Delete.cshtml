@@ -1,0 +1,19 @@
+﻿@page
+@using Loppprojekt.Pages.Extensions
+@model Loppprojekt.Soft.Areas.Motorbikes.Pages.BikeModels.DeleteModel
+
+@{
+    Layout = "_Delete";
+}
+
+    <body>
+        @Html.DisplayControlsFor(m => m.Item.BikeMarkId, Model.GetBikeMarkName(Model.Item.BikeMarkId))
+        @Html.DisplayControlsFor(m => m.Item.Name)
+        @Html.DisplayControlsFor(m => m.Item.Country)
+        @Html.DisplayControlsFor(m => m.Item.BikeBodyType)
+        @Html.DisplayControlsFor(m => m.Item.BikePower)
+        @Html.DisplayControlsFor(m => m.Item.BikeAcceleration)
+        @Html.DisplayControlsFor(m => m.Item.MaxSpeed)
+        @Html.DisplayControlsFor(m => m.Item.Description)
+        @Html.DisplayControlsFor(m => m.Item.YearOfManufacture)
+    </body>
