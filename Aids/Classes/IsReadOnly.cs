@@ -6,6 +6,7 @@
         //public static bool Property<T>(string name) {
         //    return !typeof(T).GetProperty(name)?.CanWrite ?? false;
         //}
+
     }
 }
 
